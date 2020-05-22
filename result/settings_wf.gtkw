@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed May 20 12:09:58 2020
+[*] Fri May 22 10:04:23 2020
 [*]
 [dumpfile] "/home/vlad/scr1/result/simx.vcd"
-[dumpfile_mtime] "Wed May 20 11:57:51 2020"
+[dumpfile_mtime] "Thu May 21 19:52:41 2020"
 [dumpfile_size] 1577879
 [savefile] "/home/vlad/scr1/result/settings_wf.gtkw"
 [timestart] 488
 [size] 1853 895
 [pos] -1 -1
-*-3.000000 526 492 462 482 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-3.000000 492 492 462 482 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [markername] AExecute
 [markername] BFetch
 [markername] CDecode
@@ -17,12 +17,11 @@
 [treeopen] scr1_top_tb_ahb.i_top.
 [treeopen] scr1_top_tb_ahb.i_top.i_core_top.
 [treeopen] scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.
-[treeopen] scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.
 [treeopen] scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu.
 [treeopen] scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_idu.
-[sst_width] 43
+[sst_width] 311
 [signals_width] 214
-[sst_expanded] 0
+[sst_expanded] 1
 [sst_vpaned_height] 341
 @28
 scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.clk
@@ -56,5 +55,14 @@ scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu.ialu_sum2_op1[31:0
 scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu.ialu_sum2_op2[31:0]
 [color] 1
 scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.i_pipe_exu.i_ialu.ialu_sum2_res[31:0]
+@28
+[color] 3
+scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.dmem_req
+@23
+[color] 3
+scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.dmem_addr[31:0]
+@22
+[color] 3
+scr1_top_tb_ahb.i_top.i_core_top.i_pipe_top.dmem_wdata[31:0]
 [pattern_trace] 1
 [pattern_trace] 0

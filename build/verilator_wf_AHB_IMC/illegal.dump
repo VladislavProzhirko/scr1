@@ -76,23 +76,23 @@
     2024:	00000073          	ecall
     2028:	ffffe297          	auipc	t0,0xffffe
     202c:	fd828293          	addi	t0,t0,-40 # 0 <CL_SIZE-0x20>
-    2030:	00028e63          	beqz	t0,204c <_start+0x4c>
+    2030:	02028063          	beqz	t0,2050 <_start+0x50>
     2034:	10529073          	csrw	stvec,t0
     2038:	0000b2b7          	lui	t0,0xb
     203c:	10928293          	addi	t0,t0,265 # b109 <__global_pointer$+0x8341>
     2040:	30229073          	csrw	medeleg,t0
     2044:	30202373          	csrr	t1,medeleg
-    2048:	8a6292e3          	bne	t0,t1,18ec <handle_exception>
-    204c:	30005073          	csrwi	mstatus,0
-    2050:	00002537          	lui	a0,0x2
-    2054:	80050513          	addi	a0,a0,-2048 # 1800 <STACK_SIZE+0x1400>
-    2058:	30052073          	csrs	mstatus,a0
-    205c:	00000297          	auipc	t0,0x0
-    2060:	0a428293          	addi	t0,t0,164 # 2100 <_run_test>
-    2064:	34129073          	csrw	mepc,t0
-    2068:	f1402573          	csrr	a0,mhartid
-    206c:	30200073          	mret
-	...
+    2048:	00628463          	beq	t0,t1,2050 <_start+0x50>
+    204c:	8a1ff06f          	j	18ec <handle_exception>
+    2050:	30005073          	csrwi	mstatus,0
+    2054:	00002537          	lui	a0,0x2
+    2058:	80050513          	addi	a0,a0,-2048 # 1800 <STACK_SIZE+0x1400>
+    205c:	30052073          	csrs	mstatus,a0
+    2060:	00000297          	auipc	t0,0x0
+    2064:	0a028293          	addi	t0,t0,160 # 2100 <_run_test>
+    2068:	34129073          	csrw	mepc,t0
+    206c:	f1402573          	csrr	a0,mhartid
+    2070:	30200073          	mret
 
 Дизассемблирование раздела .text:
 

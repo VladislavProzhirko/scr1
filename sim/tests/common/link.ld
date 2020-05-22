@@ -27,10 +27,15 @@ SECTIONS {
     LONG(0x6F);
     LONG(-1);
     . = 0x1880;
-    PROVIDE(__TEXT_START__ = .);
-    *(.text.init) 
+    PROVIDE(__TEXT_CODE__ = .);
+    *(.text.init);
+    . = 0x2000;
+    _start = .;
+    *(.text.start);
   } >RAM
-
+  /*.text.start ALIGN(0x2000): {
+    *(.text.start);
+}*/
   .text  : {
     *crt.o(.text .text.*)
     *(.text .text.*)

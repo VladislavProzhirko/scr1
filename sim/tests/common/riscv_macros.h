@@ -147,7 +147,8 @@ _report:                                                                \
         j sc_exit;                                                      \
         .align  6;                                                      \
         .globl _start;                                                  \
-	.org 0x7EE;\
+	.section .text.start; \
+	/*.org 0x7EE;\*/\
 _start:                                                                 \
         RISCV_MULTICORE_DISABLE;                                        \
         /*INIT_SPTBR;*/                                                 \
